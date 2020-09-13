@@ -163,7 +163,7 @@ class ORGAN(nn.Module):
                                 dtype=torch.long,
                                 device=self.device).fill_(self.vocabulary.bos)
             is_end = torch.zeros(n_samples,
-                                 dtype=torch.uint8,
+                                 dtype=torch.bool,
                                  device=self.device)
             states = None
 

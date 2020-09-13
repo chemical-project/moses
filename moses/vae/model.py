@@ -201,7 +201,7 @@ class VAE(nn.Module):
             x[:, 0] = self.bos
             end_pads = torch.tensor([max_len], device=self.device).repeat(
                 n_batch)
-            eos_mask = torch.zeros(n_batch, dtype=torch.uint8, # troch.boot
+            eos_mask = torch.zeros(n_batch, dtype=torch.bool, # troch.boot
                                    device=self.device)
 
             # Generating cycle

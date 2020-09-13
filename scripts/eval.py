@@ -24,11 +24,13 @@ def main(config, print_metrics=True):
     if config.ptest_path is not None:
         ptest = np.load(
             config.ptest_path,
-            allow_pickle=True)['stats'].item()
+            # allow_pickle=True)['stats'].item()
+            allow_pickle=True).item()
     if config.ptest_scaffolds_path is not None:
         ptest_scaffolds = np.load(
             config.ptest_scaffolds_path,
-            allow_pickle=True)['stats'].item()
+            # allow_pickle=True)['stats'].item()
+            allow_pickle=True).item()
     gen = read_smiles_csv(config.gen_path)
     metrics = get_all_metrics(gen=gen, k=config.ks, n_jobs=config.n_jobs,
                               device=config.device,

@@ -14,6 +14,10 @@ from .utils import compute_fragments, average_agg_tanimoto, \
     logP, QED, SA, weight
 
 
+# from moses.metrics.utils import compute_fragments, average_agg_tanimoto, compute_scaffolds, fingerprints, get_mol, canonic_smiles, mol_passes_filters, logP, QED, SA, weight
+
+
+
 def get_all_metrics(gen, k=None, n_jobs=1,
                     device='cpu', batch_size=512, pool=None,
                     test=None, test_scaffolds=None,

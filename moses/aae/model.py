@@ -148,7 +148,7 @@ class AAE(nn.Module):
             ).fill_(self.vocabulary.bos)
             one_lens = torch.ones(n_batch, dtype=torch.long,
                                   device=self.device)
-            is_end = torch.zeros(n_batch, dtype=torch.uint8,
+            is_end = torch.zeros(n_batch, dtype=torch.bool,
                                  device=self.device)
 
             for i in range(max_len):
